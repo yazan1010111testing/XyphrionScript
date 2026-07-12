@@ -4,7 +4,7 @@
 
 📥 COPY THIS - SHARE WITH USERS:
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/init.lua', true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/init.lua', true))()
 
 ═══════════════════════════════════════════════════════════════
 
@@ -18,16 +18,20 @@ discord.gg/xyphrion
 
 ═══════════════════════════════════════════════════════════════
 
-✅ ALL URLS UPDATED TO YOUR GITHUB REPOSITORY!
+✅ ALL URLS FIXED - SIMPLIFIED PATH STRUCTURE
 
-Your repository: yazan1010111testing/XyphrionScript
+Changed from: refs/heads/main/[commit]/
+To: main/
+
+This fixes the download issue!
 
 ═══════════════════════════════════════════════════════════════
 
-Now upload the UPDATED files to GitHub:
-1. Go to your repository
-2. Upload ALL files again (overwrite existing)
-3. Commit: "Updated GitHub URLs"
-4. Test the script!
+NOW RE-UPLOAD TO GITHUB:
+1. Go to: https://github.com/yazan1010111testing/XyphrionScript
+2. Delete ALL old files
+3. Upload ALL files from CatV6-main folder
+4. Commit: "Fixed GitHub URLs"
+5. Test the script!
 
 ═══════════════════════════════════════════════════════════════

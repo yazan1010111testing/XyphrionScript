@@ -11,12 +11,12 @@
 
 #### Option 1: Direct Loadstring (Recommended)
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/init.lua', true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/init.lua', true))()
 ```
 
 #### Option 2: With Configuration
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/init.lua', true))({
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/init.lua', true))({
     Closet = false  -- Set to true for minimal UI
 })
 ```
@@ -70,7 +70,7 @@ The script will automatically download required assets on first run. Be patient 
 ### Need to Reset?
 Run the reinstall script:
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/reinstall.luau'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/reinstall.luau'))()
 ```
 
 ## File Structure

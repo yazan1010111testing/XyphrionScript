@@ -29,7 +29,7 @@ local function downloadFile(path, func)
 			downloader.Text = 'Downloading '.. path
 		end
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/'..readfile('xyphrion/profiles/commit.txt')..'/'..select(1, path:gsub('xyphrion/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/'..select(1, path:gsub('xyphrion/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -65,41 +65,8 @@ for _, folder in {'xyphrion', 'xyphrion/games', 'xyphrion/profiles', 'xyphrion/a
 end
 
 if not shared.XyphrionDeveloper then
-	local commit = license.Commit or nil
-	if not commit then
-		local _, subbed = pcall(function() 
-			return game:HttpGet('https://github.com/yazan1010111testing/XyphrionScript') 
-		end)
-		commit = subbed:find('currentOid')
-		commit = commit and subbed:sub(commit + 13, commit + 52) or nil
-		commit = commit and #commit == 40 and commit or 'main'
-	end
-	if commit == 'main' or (isfile('xyphrion/profiles/commit.txt') and readfile('xyphrion/profiles/commit.txt') or '') ~= commit then
-		if commit ~= 'main' and isfile('xyphrion/profiles/commit.txt') then
-			shared.updated = readfile('xyphrion/profiles/commit.txt')
-		end
-		wipeFolder('xyphrion')
-		wipeFolder('xyphrion/games')
-		wipeFolder('xyphrion/guis')
-		wipeFolder('xyphrion/libraries')
-	end
+	local commit = 'main'
 	writefile('xyphrion/profiles/commit.txt', commit)
-	if #listfiles('xyphrion/profiles') < 4 then
-		local req = request({
-			Url = 'https://api.github.com/repos/yazan1010111testing/XyphrionScript/contents/profiles',
-			Method = 'GET'
-		})
-		if req.StatusCode == 200 then
-			local body = cloneref(game:GetService('HttpService')):JSONDecode(req.Body)
-			if body and typeof(body) == 'table' then
-				for _, v in body do
-					if v.type == 'file' then
-						pcall(downloadFile, 'xyphrion/'.. ({v.path:gsub(' ', '%%20')})[1])
-					end
-				end
-			end
-		end
-	end
 end
 
 downloader.Text = ''
