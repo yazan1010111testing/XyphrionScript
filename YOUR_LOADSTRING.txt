@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════════════════
+                    YOUR XYPHRION LOADSTRING
+═══════════════════════════════════════════════════════════════
+
+📥 COPY THIS - SHARE WITH USERS:
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/init.lua', true))()
+
+═══════════════════════════════════════════════════════════════
+
+🔑 GET KEY FROM:
+https://work.ink/2JiA/d653afbe-06a3-4fc9-ba5f-674b59ebcbbd
+
+═══════════════════════════════════════════════════════════════
+
+💬 DISCORD:
+discord.gg/xyphrion
+
+═══════════════════════════════════════════════════════════════
+
+✅ ALL URLS UPDATED TO YOUR GITHUB REPOSITORY!
+
+Your repository: yazan1010111testing/XyphrionScript
+
+═══════════════════════════════════════════════════════════════
+
+Now upload the UPDATED files to GitHub:
+1. Go to your repository
+2. Upload ALL files again (overwrite existing)
+3. Commit: "Updated GitHub URLs"
+4. Test the script!
+
+═══════════════════════════════════════════════════════════════

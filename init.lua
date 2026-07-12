@@ -29,7 +29,7 @@ local function downloadFile(path, func)
 			downloader.Text = 'Downloading '.. path
 		end
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/Xyphrion/XyphrionScript/'..readfile('xyphrion/profiles/commit.txt')..'/'..select(1, path:gsub('xyphrion/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/'..readfile('xyphrion/profiles/commit.txt')..'/'..select(1, path:gsub('xyphrion/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -68,7 +68,7 @@ if not shared.XyphrionDeveloper then
 	local commit = license.Commit or nil
 	if not commit then
 		local _, subbed = pcall(function() 
-			return game:HttpGet('https://github.com/Xyphrion/XyphrionScript') 
+			return game:HttpGet('https://github.com/yazan1010111testing/XyphrionScript') 
 		end)
 		commit = subbed:find('currentOid')
 		commit = commit and subbed:sub(commit + 13, commit + 52) or nil
@@ -86,7 +86,7 @@ if not shared.XyphrionDeveloper then
 	writefile('xyphrion/profiles/commit.txt', commit)
 	if #listfiles('xyphrion/profiles') < 4 then
 		local req = request({
-			Url = 'https://api.github.com/repos/xyphrion/xyphrionscript/contents/profiles',
+			Url = 'https://api.github.com/repos/yazan1010111testing/XyphrionScript/contents/profiles',
 			Method = 'GET'
 		})
 		if req.StatusCode == 200 then

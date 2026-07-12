@@ -50,7 +50,7 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/Xyphrion/XyphrionScript/'..readfile('xyphrion/profiles/commit.txt')..'/'..select(1, path:gsub('xyphrion/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/'..readfile('xyphrion/profiles/commit.txt')..'/'..select(1, path:gsub('xyphrion/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			task.spawn(error, res)
@@ -84,7 +84,7 @@ local function finishLoading()
 				if shared.XyphrionDeveloper then
 					loadstring(readfile('xyphrion/main.lua'), 'main')(_scriptconfig)
 				else
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/Xyphrion/XyphrionScript/main/init.lua'), 'init')(_scriptconfig)
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/init.lua'), 'init')(_scriptconfig)
 				end
 			]]
 			local teleportConfig = httpService:JSONEncode(license)
@@ -166,7 +166,7 @@ if not shared.XyphrionIndependent then
 	else
 		if not shared.XyphrionDeveloper then
 			local suc, res = pcall(function()
-				return game:HttpGet('https://raw.githubusercontent.com/Xyphrion/XyphrionScript/'..readfile('xyphrion/profiles/commit.txt')..'/games/'..game.PlaceId..'.lua', true)
+				return game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/'..readfile('xyphrion/profiles/commit.txt')..'/games/'..game.PlaceId..'.lua', true)
 			end)
 			if suc and res ~= '404: Not Found' then
 				loadstring(downloadFile('xyphrion/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)

@@ -6,7 +6,7 @@ A powerful and feature-rich Bedwars script with advanced modules and customizati
 ## Quick Start
 
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Xyphrion/XyphrionScript/main/init.lua', true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/refs/heads/main/init.lua', true))()
 ```
 
 ## Get Your Key
