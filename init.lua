@@ -32,6 +32,8 @@ local function downloadFile(path, func)
 			return game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/'..select(1, path:gsub('xyphrion/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
+			downloader.Text = 'Error: '..tostring(res)
+			task.wait(5)
 			error(res)
 		end
 		if path:find('.lua') then
@@ -41,19 +43,6 @@ local function downloadFile(path, func)
 		downloader.Text = ''
 	end
 	return (func or readfile)(path)
-end
-
-local function wipeFolder(path)
-	if not isfolder(path) then return end
-	for _, file in listfiles(path) do
-		if file:find('init') then continue end
-		if file:find('profile') then continue end
-		if isfile(file) then
-			delfile(file)
-		elseif isfolder(file) then
-			wipeFolder(file)
-		end
-	end
 end
 
 -- Create folders
@@ -68,5 +57,9 @@ if not shared.XyphrionDeveloper then
 	writefile('xyphrion/profiles/commit.txt', 'main')
 end
 
+downloader.Text = 'Loading main script...'
+-- Download and run main.lua
+local mainScript = downloadFile('xyphrion/main.lua')
 downloader.Text = ''
-return loadstring(downloadFile('xyphrion/main.lua'), 'main')(license)
+
+return loadstring(mainScript, 'main')(license)

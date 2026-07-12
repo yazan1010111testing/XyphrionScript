@@ -1,0 +1,74 @@
+═══════════════════════════════════════════════════════════════
+                    DEBUGGING GUIDE
+═══════════════════════════════════════════════════════════════
+
+If you're getting 404 errors, the files aren't in the right place on GitHub.
+
+Check these URLs - they should ALL work:
+
+✅ Init file:
+https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/init.lua
+
+✅ Main file:
+https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/main.lua
+
+✅ GUI file (new theme):
+https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/guis/new.lua
+
+✅ Work.ink auth:
+https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/libraries/workink_auth.lua
+
+✅ Universal game:
+https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/games/universal.lua
+
+═══════════════════════════════════════════════════════════════
+
+IF 404 ERROR:
+The files are NOT uploaded correctly to GitHub.
+
+SOLUTION:
+1. Go to: https://github.com/yazan1010111testing/XyphrionScript
+2. Make sure you see these folders in the root:
+   - games/
+   - guis/
+   - libraries/
+   - assets/
+   - profiles/
+3. And these files in the root:
+   - init.lua
+   - main.lua
+   - loadstring
+   - reinstall.luau
+
+If they're NOT there, you need to upload them!
+
+═══════════════════════════════════════════════════════════════
+
+CORRECT FOLDER STRUCTURE ON GITHUB:
+
+XyphrionScript/
+├── assets/
+│   ├── new/
+│   ├── old/
+│   ├── rise/
+│   └── wurst/
+├── games/
+│   ├── universal.lua
+│   ├── 6872274481.lua
+│   └── ... (other game files)
+├── guis/
+│   ├── new.lua
+│   ├── old.lua
+│   └── rise.lua
+├── libraries/
+│   ├── workink_auth.lua
+│   ├── base64.lua
+│   └── ... (other libraries)
+├── profiles/
+│   └── (profile templates)
+├── init.lua          ← MUST BE IN ROOT
+├── main.lua          ← MUST BE IN ROOT
+├── loadstring
+└── README.md
+
+═══════════════════════════════════════════════════════════════
