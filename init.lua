@@ -56,17 +56,16 @@ local function wipeFolder(path)
 	end
 end
 
-
+-- Create folders
 for _, folder in {'xyphrion', 'xyphrion/games', 'xyphrion/profiles', 'xyphrion/assets', 'xyphrion/libraries', 'xyphrion/guis'} do
 	if not isfolder(folder) then
-		downloader.Text = 'Downloading '.. folder
+		downloader.Text = 'Creating '.. folder
 		makefolder(folder)
 	end
 end
 
 if not shared.XyphrionDeveloper then
-	local commit = 'main'
-	writefile('xyphrion/profiles/commit.txt', commit)
+	writefile('xyphrion/profiles/commit.txt', 'main')
 end
 
 downloader.Text = ''
