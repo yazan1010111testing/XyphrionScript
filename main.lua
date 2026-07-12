@@ -4,12 +4,14 @@ repeat task.wait() until game:IsLoaded()
 if shared.xyphrion then shared.xyphrion:Uninject() end
 
 local xyphrion
-local loadstring = function(...)
-	local res, err = loadstring(...)
+-- Store the real loadstring before we override it
+local realLoadstring = getfenv().loadstring or loadstring
+local customLoadstring = function(...)
+	local res, err = realLoadstring(...)
 	if err and xyphrion then
 		xyphrion:CreateNotification('Xyphrion', 'Failed to load : '..err, 30, 'alert')
 	end
-	return res
+	return res, err
 end
 local queue_on_teleport = queue_on_teleport or function() end
 local isfile = isfile or function(file)
@@ -132,7 +134,7 @@ if not isfile('xyphrion/profiles/commit.txt') then
 end
 
 getgenv().used_init = true
-xyphrion = loadstring(downloadFile('xyphrion/guis/'..gui..'.lua'), 'gui')(license)
+xyphrion = realLoadstring(downloadFile('xyphrion/guis/'..gui..'.lua'), 'gui')(license)
 _G.xyphrion = xyphrion
 shared.xyphrion = xyphrion
 
@@ -144,7 +146,7 @@ end
 
 if not shared.XyphrionIndependent then
 	-- Work.ink Authentication
-	local WorkInkAuth = loadstring(downloadFile('xyphrion/libraries/workink_auth.lua'), 'workink_auth')()
+	local WorkInkAuth = realLoadstring(downloadFile('xyphrion/libraries/workink_auth.lua'), 'workink_auth')()
 	local authenticated, message, key = WorkInkAuth:Authenticate()
 	
 	if not authenticated then
@@ -160,16 +162,16 @@ if not shared.XyphrionIndependent then
 	getgenv().xyphrionname = playersService.LocalPlayer.Name
 	getgenv().xyphrionrole = 'Premium'
 	
-	loadstring(downloadFile('xyphrion/games/universal.lua'), 'universal')(license)
+	realLoadstring(downloadFile('xyphrion/games/universal.lua'), 'universal')(license)
 	if isfile('xyphrion/games/'..game.PlaceId..'.lua') then
-		loadstring(readfile('xyphrion/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
+		realLoadstring(readfile('xyphrion/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
 	else
 		if not shared.XyphrionDeveloper then
 			local suc, res = pcall(function()
 				return game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/games/'..game.PlaceId..'.lua', true)
 			end)
 			if suc and res ~= '404: Not Found' then
-				loadstring(downloadFile('xyphrion/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
+				realLoadstring(downloadFile('xyphrion/games/'..game.PlaceId..'.lua'), tostring(game.PlaceId))(license)
 			end
 		end
 	end
