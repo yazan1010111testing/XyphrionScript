@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════════════════
+              UPLOAD THE NEW INIT.LUA TO GITHUB
+═══════════════════════════════════════════════════════════════
+
+The issue is with how loadstring is being called.
+
+I've created a NEW init.lua that:
+✅ Downloads main.lua correctly
+✅ Handles loadstring properly 
+✅ Shows better error messages
+✅ Doesn't return nil
+
+═══════════════════════════════════════════════════════════════
+
+STEPS TO FIX:
+
+1. Go to: https://github.com/yazan1010111testing/XyphrionScript
+
+2. Find and OPEN the file: init.lua
+
+3. Click the pencil icon (Edit this file)
+
+4. DELETE all the old code
+
+5. COPY the entire NEW init.lua from:
+   c:\Users\fredr\OneDrive\Documents\CatV6-main\init.lua
+
+6. PASTE it into GitHub
+
+7. Scroll down and click "Commit changes"
+
+8. Test your script again!
+
+═══════════════════════════════════════════════════════════════
+
+YOUR LOADSTRING (same as before):
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yazan1010111testing/XyphrionScript/main/init.lua', true))()
+
+═══════════════════════════════════════════════════════════════
+
+WHAT THIS FIXES:
+
+The old init.lua was using "return loadstring(...)" which caused
+issues with some executors. The new one properly executes the 
+main.lua function without returning nil.
+
+═══════════════════════════════════════════════════════════════
+
+After uploading, if you STILL get errors, tell me the EXACT 
+error message from the console!
+
+═══════════════════════════════════════════════════════════════
