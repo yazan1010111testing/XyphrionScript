@@ -1,0 +1,89 @@
+═══════════════════════════════════════════════════════════════
+                    XYPHRION QUICK REFERENCE
+═══════════════════════════════════════════════════════════════
+
+📁 FOLDER TO UPLOAD
+   c:\Users\fredr\OneDrive\Documents\CatV6-main
+
+🔗 YOUR WORK.INK LINK
+   https://work.ink/2JiA/d653afbe-06a3-4fc9-ba5f-674b59ebcbbd
+
+📦 GITHUB REPOSITORY NAME (suggested)
+   XyphrionScript
+
+🌐 YOUR LOADSTRING (after uploading to GitHub)
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/YOUR_USERNAME/XyphrionScript/main/init.lua', true))()
+
+   ⚠️ Replace YOUR_USERNAME with your actual GitHub username
+
+💬 DISCORD SERVER
+   discord.gg/xyphrion
+
+═══════════════════════════════════════════════════════════════
+                        FILE OVERVIEW
+═══════════════════════════════════════════════════════════════
+
+✅ 12 Documentation files
+✅ 3 Main script files (init.lua, main.lua, reinstall.luau)
+✅ 4 Folders with game code and assets
+✅ All branding changed to Xyphrion
+✅ Work.ink authentication integrated
+✅ .gitignore to protect user data
+
+═══════════════════════════════════════════════════════════════
+                    UPLOAD INSTRUCTIONS
+═══════════════════════════════════════════════════════════════
+
+1. Go to https://github.com/new
+2. Create repository named "XyphrionScript" (Public)
+3. Don't initialize with anything
+4. After creation, click "uploading an existing file"
+5. Drag ALL files from CatV6-main folder
+6. Commit: "Initial commit - Xyphrion v1.0"
+7. Test the script!
+
+═══════════════════════════════════════════════════════════════
+                      NEED TO CHANGE?
+═══════════════════════════════════════════════════════════════
+
+If you use a DIFFERENT repository name (not XyphrionScript):
+
+Find & Replace in these files:
+• init.lua
+• main.lua  
+• README.md
+• INSTALLATION.md
+
+Find: Xyphrion/XyphrionScript
+Replace: YOUR_USERNAME/YOUR_REPO_NAME
+
+═══════════════════════════════════════════════════════════════
+                         FEATURES
+═══════════════════════════════════════════════════════════════
+
+✨ Work.ink key system (your link already configured)
+✨ Auto-save keys for users
+✨ 3 GUI themes (new, old, rise)
+✨ Profile system
+✨ 15 game-specific modules
+✨ Combat & utility features
+✨ Rainbow customization
+
+═══════════════════════════════════════════════════════════════
+                      HELP & GUIDES
+═══════════════════════════════════════════════════════════════
+
+📖 GITHUB_SETUP.md - Detailed upload instructions
+📖 FINAL_CHECKLIST.md - Pre-upload checklist
+📖 WORK_INK_SETUP.md - Work.ink configuration
+📖 INSTALLATION.md - User installation guide
+📖 REBRANDING_SUMMARY.md - All changes made
+
+═══════════════════════════════════════════════════════════════
+
+Ready to upload? Everything is configured!
+Follow GITHUB_SETUP.md for step-by-step instructions.
+
+Good luck! 🚀
+
+═══════════════════════════════════════════════════════════════
